@@ -1,55 +1,15 @@
-let char = ['\r|   ', '\r/   ', '\r-  ', '\r\\  ']
+let char = ['\r|   ', '\r/   ', '\r-  ', '\r\\  ', '\r|  ', '\n'];
 let delay = 0
 
-let spinnerFunction = function() {
-  for (let i = 0; i < char.length; i++) {
+let spinnerFunction = function(array) {
+  for (let symbol of array) {
     setTimeout(() => {
-      process.stdout.write('\r|   ');
+      process.stdout.write(symbol);
     }, delay);
     delay += 200;
-
   }
-  return 
-}
+};
 
 
+spinnerFunction(char);
 
-
-
-// setTimeout(() => {
-//   process.stdout.write('\r/   ');
-// }, 300);
-
-// setTimeout(() => {
-//   process.stdout.write('\r-   ');
-// }, 500);
-
-// setTimeout(() => {
-//   // Need to escape the backslash since it's a special character.
-//   process.stdout.write('\r\\   '); 
-// }, 700);
-
-// setTimeout(() => {
-//   process.stdout.write('\r|   ');
-// }, 900);
-
-// setTimeout(() => {
-//   process.stdout.write('\r/   ');
-// }, 1100);
-
-// setTimeout(() => {
-//   process.stdout.write('\r-   ');
-// }, 1300);
-
-// setTimeout(() => {
-//   // Need to escape the backslash since it's a special character.
-//   process.stdout.write('\r\\   '); 
-// }, 1500);
-
-// setTimeout(() => {
-//   process.stdout.write('\r|   ');
-// }, 1700);
-
-// setTimeout(() => {
-//   process.stdout.write('\n');
-// }, 1701);

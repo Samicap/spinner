@@ -1,5 +1,5 @@
 let char = ['\r|   ', '\r/   ', '\r-  ', '\r\\  ', '\r|  ', '\n'];
-let delay = 0
+let delay = 0;
 
 let spinnerFunction = function(array) {
   for (let symbol of array) {
